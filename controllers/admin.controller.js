@@ -28,7 +28,7 @@ const registerAdmin = async (req, res) => {
   if (!!admin[0]) {
     return apiResponse(res, 200, {
       status: "failed",
-      message: `Email Address availability : Cette adresse e-mail : \`${email}\` est déjà pris!`,
+      message: `Disponibilité de l'adresse e-mail : Cette adresse e-mail : \`${email}\` est déjà pris!`,
     });
   } else {
     const plaintextPassword = password;
@@ -50,7 +50,7 @@ const registerAdmin = async (req, res) => {
 
       return apiResponse(res, 201, {
         status: "ok",
-        message: `Super Admin registration : Super Admin was registered successfully !`,
+        message: `Enregistrement Super Admin : Super Admin a été enregistré avec succès !`,
       });
     } catch (e) {
       return apiResponse(res, 422, {
@@ -65,7 +65,7 @@ const loginAdmin = async (req, res) => {
   if (!req.body.email || !req.body.password) {
     return apiResponse(res, 401, {
       status: "failed",
-      message: `Connexion failed : invalid request!`,
+      message: `Échec de la connexion : demande invalide !`,
     });
   }
 
@@ -78,7 +78,7 @@ const loginAdmin = async (req, res) => {
   if (!admin.length) {
     return apiResponse(res, 404, {
       status: "failed",
-      message: `Connexion failed : invalid email password combination !`,
+      message: `Échec de la connexion : combinaison de mot de passe e-mail invalide !`,
     });
   }
 
@@ -87,19 +87,19 @@ const loginAdmin = async (req, res) => {
   if (!verifyHash(password, userPassword)) {
     return apiResponse(res, 404, {
       status: "failed",
-      message: `Connexion failed : invalid email password combination !`,
+      message: `Échec de la connexion : combinaison de mot de passe e-mail invalide !`,
     });
   }
 
   const token = await jwt.sign({ _id }, "7d", secretType.ADMIN).catch(() => {
     return apiResponse(res, 403, {
       status: "failed",
-      message: `Connexion failed :  Server problem !`,
+      message: `Échec de la connexion : problème de serveur !`,
     });
   });
   return apiResponse(res, 200, {
     status: "ok",
-    message: `Connexion success : Login ok : \`${email}\` !`,
+    message: `Succès de connexion : Connexion ok :\`${email}\` !`,
     token: token,
   });
 };
@@ -116,7 +116,7 @@ const validateMail = async (req, res) => {
   });
   return apiResponse(res, 200, {
     status: "ok",
-    message: `Your email address is successfully verified by Super Admin !`,
+    message: `Votre adresse e-mail est vérifiée avec succès par le super administrateur !`,
   });
 };
 
@@ -127,13 +127,13 @@ const blockMail = async (req, res) => {
   }).catch((err) => {
     return apiResponse(res, 401, {
       status: "failed",
-      message: `Connexion failed : Not found!`,
+      message: `Échec de la connexion : introuvable!`,
     });
   });
 
   return apiResponse(res, 200, {
     status: "ok",
-    message: `Your email address is successfully verified by Super Admin !`,
+    message: `Votre adresse e-mail est vérifiée avec succès par le super administrateur !`,
   });
 };
 
@@ -141,14 +141,14 @@ const getAllRestaurants = async (req, res) => {
   const restaurants = await getRestaurant({}).catch(() => {
     return apiResponse(res, 401, {
       status: "failed",
-      message: `Connexion failed : Not found!`,
+      message: `Échec de la connexion : introuvable!`,
     });
   });
   if (restaurants.length)
     return apiResponse(res, 200, { message: ``, data: restaurants });
   else
     return apiResponse(res, 200, {
-      message: `there is no result available !`,
+      message: `Échec de la connexion : introuvable !`,
       data: [],
     });
 };

@@ -20,7 +20,7 @@ const loginRestaurant = async (req, res) => {
   if (!req.body.email || !req.body.password) {
     return apiResponse(res, 401, {
       status: "failed",
-      message: `Connexion failed : invalid request!`,
+      message: `Échec de la connexion : demande invalide !`,
     });
   }
 
@@ -33,7 +33,7 @@ const loginRestaurant = async (req, res) => {
   if (!restaurant.length) {
     return apiResponse(res, 404, {
       status: "failed",
-      message: `Connexion failed : invalid email password combination !`,
+      message: `Échec de la connexion : combinaison de mot de passe e-mail invalide !`,
     });
   }
 
@@ -47,33 +47,33 @@ const loginRestaurant = async (req, res) => {
   if (!verifyHash(password, userPassword)) {
     return apiResponse(res, 404, {
       status: "failed",
-      message: `Connexion failed : invalid email password combination !`,
+      message: `Échec de la connexion : combinaison de mot de passe e-mail invalide !`,
     });
   }
 
   if (!isVerified) {
     return apiResponse(res, 403, {
       status: "failed",
-      message: `Email Address verification : Veuillez vérifier votre compte à partir de votre adresse e-mail
+      message: `Vérification de l'adresse e-mail : Veuillez vérifier votre compte à partir de votre adresse e-mail
 : \`${email}\` to login !`,
     });
   }
-  if (!isAuthorized) {
+  if (!isAuthorizeblockedd) {
     return apiResponse(res, 403, {
       status: "blocked",
-      message: `Your email address : \`${email}\` is blocked !`,
+      message: `votre email address : \`${email}\` est blocké !`,
     });
   }
 
   const token = await jwt.sign({ _id }, "7d", secretType.USER).catch(() => {
     return apiResponse(res, 403, {
       status: "failed",
-      message: `Connexion failed :  Server problem !`,
+      message: `Échec de la connexion : problème de serveur !`,
     });
   });
   return apiResponse(res, 200, {
     status: "ok",
-    message: `Connexion success : Login ok : \`${email}\` !`,
+    message: `Succès de connexion : Connexion ok: \`${email}\` !`,
     token: token,
   });
 };
@@ -100,7 +100,7 @@ const registerRestaurant = async (req, res) => {
     if (status === "Active" || status === "Pending")
       return apiResponse(res, 200, {
         status: "failed",
-        message: `Email Address availability : Cet e-mail  : \`${email}\` est déja utilisé !`,
+        message: `Disponibilité de l'adresse e-mail : Cet e-mail  : \`${email}\` est déja utilisé !`,
       });
     //else if (status === "Pending") return apiResponse(res, 200, { status: "ok", message: `Email Address verification : Please verify your account from your email address : \`${email}\` !` });
     return apiResponse(res, 403, {
@@ -136,17 +136,17 @@ const registerRestaurant = async (req, res) => {
       await sendMail(
           email,
           `https://beep-maker.herokuapp.com/api/restaurant/verify/${token}`,
-          "Email Address confirmation"
+          "Confirmation de l'adresse e-mail"
       );
 
       return apiResponse(res, 201, {
         status: "ok",
-        message: `Restaurant registration: Le restaurant a été enregistré avec succès, veuillez vérifier votre adresse e-mail : \`${result.email}\` !`,
+        message: `Inscription au restaurant : Le restaurant a été enregistré avec succès !`,
       });
     } catch (e) {
       let message = e.message;
       if (e.code === 11000) {
-        message = `Restaurant validation failed: duplicate key ${JSON.stringify(
+        message = `Échec de la validation du restaurant : clé en double ${JSON.stringify(
             e.keyValue
         )}`;
       }
@@ -284,7 +284,7 @@ const changePasswordRestaurant = async (req, res) => {
 
     return apiResponse(res, 200, {
       success: true,
-      message: `Password updated : Votre mot de passe a été modifié avec succès`,
+      message: `Mot de passe mis à jour : Votre mot de passe a été modifié avec succès`,
     });
   } catch (e) {
     return apiResponse(res, 200, {
@@ -301,7 +301,7 @@ const forgotPassword = async (req, res) => {
   if (!restaurant.length) {
     return apiResponse(res, 404, {
       success: false,
-      message: `Reset password failed :L'adresse e-mail n'existe pas
+      message: `Échec de la réinitialisation du mot de passe :L'adresse e-mail n'existe pas
 `,
     });
   }
@@ -309,7 +309,7 @@ const forgotPassword = async (req, res) => {
   if (!restaurant[0].isAuthorized) {
     return apiResponse(res, 404, {
       success: false,
-      message: `Reset password failed : \`${email}\` est bloqué
+      message: `Échec de la réinitialisation du mot de passe: \`${email}\` est bloqué
  !`,
     });
   }
@@ -323,11 +323,11 @@ const forgotPassword = async (req, res) => {
     await sendMailReset(
         email,
         `https://beep-maker.herokuapp.com/reset-password/${token}`,
-        "Account Reset password"
+        "Mot de passe de réinitialisation du compte"
     );
     return apiResponse(res, 200, {
       success: true,
-      message: `Account Reset password : Veuillez vérifier votre adresse e-mail : \`${email}\` !`,
+      message: `Mot de passe de réinitialisation du compte : Veuillez vérifier votre adresse e-mail : \`${email}\` !`,
     });
   } catch (e) {
     return apiResponse(res, 200, {
@@ -347,7 +347,7 @@ const verifyForgotPassword = async (req, res) => {
     );
     return apiResponse(res, 200, {
       success: true,
-      message: `Forget password verification : Vérification de l'e-mail ok !`,
+      message: `Oublier la vérification du mot de passe : Vérification de l'e-mail ok !`,
       token,
     });
   } catch (e) {

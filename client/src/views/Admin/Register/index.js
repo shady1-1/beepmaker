@@ -112,7 +112,7 @@ const RegisterPage = (props) => {
               <Link className="btn-1" to="/login">
                 Connexion
               </Link>
-              <Link className="btn-1" to={routes.adminRegisterProPage}>
+              <Link className="button" to={routes.adminRegisterProPage}>
                 Espace pro
               </Link>
             </div>
@@ -147,11 +147,11 @@ const RegisterPage = (props) => {
                   </span>
                   <br></br>
                   <button
-                    className={"btn pro sonar " + rightMenuActiveBtn}
-                    onClick={() => {
-                      history.push("/register/pro");
-                      changeView("cmvnax");
-                    }}
+                      className={"btn pro sonar " + rightMenuActiveBtn}
+                      onClick={() => {
+                        history.push("/register/pro");
+                        changeView("cmvnax");
+                      }}
                   >
                     Espace pro
                   </button>

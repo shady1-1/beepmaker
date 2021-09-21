@@ -1,0 +1,124 @@
+.notconfirmed-beep {
+/*	margin-top: 20px;*/
+	border: 1px solid #85b4ee;
+	border-radius: 10px;
+	/*display: flex;*/
+	flex-direction: row;
+	justify-content: center;
+	/*max-height: 100px;*/
+}
+
+.notconfirmed-beep-number {
+	margin: 17px 29px;
+	padding: 0;
+	font: normal normal 700 54px Montserrat;
+}
+
+.notconfirmed-beep-date {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font: normal normal 700 54px Montserrat;
+}
+
+.notconfirmed-beep-call {
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: auto;
+	margin-top: 24px;
+	font-size: 20px;
+	width: 168px;
+	height: 50px;
+	background-color: #0DB974;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	font: normal normal 600 20px Montserrat;
+	cursor: pointer;
+}
+
+.notconfirmed-beep-date p {
+	margin: 0;
+	opacity: 0.5;
+}
+
+.notconfirmed-beep-date-title {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.notconfirmed-beep-date-content {
+	font-size: 16px;
+	line-height: 21px;
+}
+
+.notconfirmed-beep-call-icom {
+	margin-right: 10px;
+}
+
+.notconfirmed-beep-confirm{
+	vertical-align: middle;
+    display: inline-block;
+    margin-left: auto;
+    margin-top: 24px;
+    font-size: 20px;
+    height: 50px;
+    background-color: #0DB974;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font: normal normal 600 20px Montserrat;
+    cursor: pointer;
+		width: 100%;
+}
+
+.notconfirmed-beep-delete{
+	vertical-align: middle;
+    display: inline-block;
+    margin-left: auto;
+    margin-top: 24px;
+    font-size: 20px;
+    height: 50px;
+    background-color: #f50d0d;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font: normal normal 600 20px Montserrat;
+    cursor: pointer;
+		width: 100%;
+}
+
+.notconfirmed-beep-note{
+	vertical-align: middle;
+    display: inline-block;
+    margin-left: auto;
+    margin-top: 24px;
+    font-size: 20px;
+    height: 50px;
+    background-color: #fff;
+		border: 1px solid #0CB26F;
+    color: #000;
+    border-radius: 10px;
+    font: normal normal 600 20px Montserrat;
+    cursor: pointer;
+		width: 100%;
+}
+
+.pending .beeps-list-items{
+	display: grid;
+	grid-template-columns: 48% 48%;
+	grid-template-rows: 1fr 1fr;
+	column-gap: 16px;
+	row-gap: 20px;
+	min-width: 720px;
+	max-width: 720px;
+}
+
+.pending .notconfirmed-beep-container{
+	margin: 25px 28px 30px 28px;
+}
+
+.pending .notconfirmed-beep-number{
+	margin: 44px 0 20px 0;
+	text-align: center;
+}

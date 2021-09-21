@@ -1,0 +1,34 @@
+.modal-backgound {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000cc;
+}
+.modal-form-wrapper {
+  
+  width: 384px;
+  background: #ffffff;
+  margin: 150px auto;
+  padding: 25px;
+  border-radius: 10px;
+}
+.modal-backgound input {
+  width: 352px;
+  height: 115px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  font-size: x-large;
+}
+.modal-backgound h6 {
+ display: inline;
+}
+.modal-backgound h1 {
+  text-align: center;
+  display: block;
+  margin: auto;
+ }
+.half-btn {
+width: 40% !important;
+margin: 5% !important;
+}

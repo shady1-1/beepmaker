@@ -1,0 +1,212 @@
+.restaurants-container {
+  background-repeat: repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  display: flex;
+  overflow: auto;
+}
+
+.super-admin {
+  height: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+	margin-top: 44px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.super-admin table {
+  border: 1px solid #1492e680;
+  border-collapse: separate;
+  width: 100%;
+  border-radius: 10px;
+  font: normal normal 500 18px/27px Montserrat;
+  background: #fff;
+}
+
+.super-admin td {
+  padding: 8px 10px;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.33);
+}
+
+.restaurants-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: auto;
+  align-items: center;
+	min-height: 669px;
+  padding: 0 20px;
+}
+
+.btn-back:hover {
+  text-decoration: underline;
+}
+
+.confidentiality-container .cl {
+  display: flex;
+}
+
+.btn-back-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  min-height: 60px;
+}
+
+.beeps-list-btn-items {
+  display: flex;
+  position: relative;
+  flex: auto;
+  min-height: 173px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  justify-content: center;
+	min-width: 720px;
+	overflow: hidden;
+  height: 100%;
+}
+
+.restaurants-logo {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 61px;
+  align-items: center;
+  margin-top: 110px;
+  justify-content: center;
+}
+
+.validate-btn {
+  background-color: #008000aa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  text-shadow: 0 0 4px #000;
+  color: #fff;
+  padding: 5px;
+}
+
+.block-btn {
+  background-color: #ff0000aa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  text-shadow: 0 0 4px #000;
+  color: #fff;
+  padding: 5px;
+}
+
+
+/**/
+
+
+.home-footer {
+	display: flex;
+	position: relative;
+	width: 100%;
+	margin-bottom: 31px;
+	flex-direction: row;
+	align-items: center;
+}
+
+.home-logo {
+	position: relative;
+	left: 0;
+	display: flex;
+}
+
+.home-logo img {
+	width: 129px;
+	height: 22px;
+}
+
+.home-logout-container {
+	position: relative;
+	font: normal normal 600 14px/25px Montserrat;
+	display: flex;
+	flex: auto;
+	justify-content: flex-end;
+	text-decoration: none;
+}
+
+.home-logout {
+	cursor: pointer;
+	color: rgb(20, 115, 230);
+	position: relative;
+}
+
+.beeps-list{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.beep-btn-m{
+	margin-right: 13px;
+}
+
+.beep-btn.active{
+	background-color: #1473E6 ;
+	color:#fff;
+}
+
+.beep-btn{
+	font: normal normal 600 20px Montserrat;
+	border: 1px solid #85B4EE;
+	width: 168px;
+	height: 60px;
+	border-radius: 10px;
+	background-color: #fff ;
+	color:#000;
+	cursor: pointer;
+}
+
+.djdsfpds{
+	padding-top: 20px;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	min-height: 60px;
+}
+
+.beeps-list-items{
+	position: relative;
+	padding: 0 5px 0 0;
+	flex-direction: row;
+	height: 100%;
+	overflow: auto;
+	margin-top: 30px;
+}
+
+.djdsfpds .red-circle{
+	position: absolute;
+	width: auto;
+	min-width: 20px;
+	height: auto;
+	background-color: #F44336;
+	padding: 5px;
+	border-radius: 50%;
+	top: -15px;
+	text-align: center;
+	right: -15px;
+	color: #fff;
+	font: normal normal 600 20px/1 Montserrat;
+}
+
+.beeps-list-pending-btn-container{
+	position: relative;
+	height: 60px;
+}

@@ -1,0 +1,170 @@
+.vertical-menu {
+	position: relative;
+	width: 352px;
+	border: 1px solid #0002;
+	border-radius: 5px;
+}
+
+.account-content {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	width: 100%;
+	max-width: 1080px;
+	min-width: 1080px;
+	min-height: 669px;
+	margin: 28px auto;
+}
+
+.account-container .container-left {
+	width: 352px;
+	display: flex;
+	position: relative;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.account-container .container-right {
+	border: 1px solid #0002;
+	display: flex;
+	position: relative;
+	width: 100%;
+	flex: 1;
+	margin-left: 16px;
+	border-radius: 5px;
+	background: #fff;
+}
+
+.account-container .container-right .account {
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 16px 40px 92px;
+	max-width: 537px;
+	min-height: 450px;
+}
+
+.account-container .container-right .account img {
+	display: block;
+}
+
+.account-container .container-right .account .account-title {
+	position: relative;
+	margin: 20px 0 40px 0;
+	height: 37px;
+	text-align: left;
+	font: normal normal 600 24px/32px Montserrat;
+	letter-spacing: 0px;
+	color: #1D1F22;
+	opacity: 1;
+}
+
+.btn-account-submit {
+	width: 100%;
+	height: 59px;
+	background-color: #5754F7;
+	border-radius: 5px;
+	text-align: center;
+	font: normal normal 600 20px/25px Montserrat;
+	letter-spacing: 0px;
+	color: #FFFFFF;
+	opacity: 1;
+	border: none;
+	position: relative;
+	margin-top: 30px;
+	letter-spacing: 0;
+	cursor: pointer;
+}
+
+.account-image {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height: 192px;
+	overflow: hidden;
+	flex-direction: column;
+	max-width: 192px;
+	margin: 20px auto auto;
+}
+
+.account-image img{
+	position: relative;
+	display: flex;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.account-name {
+	margin-top: 16px;
+	text-align: center;
+}
+
+.account-name span {
+	font: normal normal 600 24px/34px Montserrat;
+	letter-spacing: 0px;
+	color: #2B2943;
+}
+
+.separation {
+	height: 2px;
+	background: #E0E0E0 0% 0% no-repeat padding-box;
+	opacity: 1;
+	margin: 22px 20px 20px 20px;
+}
+
+.account-settings a.active {
+	text-decoration: none;
+	position: relative;
+	color: #FFFFFF;
+	padding: 0;
+	font: normal normal 600 22px/29px Montserrat;
+	background: #1473E6 0% 0% no-repeat padding-box;
+	border-radius: 5px;
+}
+
+.account-settings a {
+	margin: 0 20px;
+	height: 56px;
+	display: block;
+	text-align: left;
+	font: normal normal 500 22px/27px Montserrat;
+	letter-spacing: 0px;
+	text-decoration: none;
+	color: #000;
+}
+
+.account-settings a:hover {
+	text-decoration: underline;
+}
+
+.account-settings a span {
+	top: 12px;
+	left: 17px;
+	position: relative;
+}
+
+.account-container select {
+	width: 100%;
+}
+
+.account-container input,.account-container select {
+	color: #000;
+	font: normal normal 500 18px/25px Montserrat;
+}
+
+.account-container {
+	background-color: #f7f7f7;
+	background-repeat: repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	display: flex;
+	overflow: auto;
+}
+
+.account-container .cl {
+	display: flex;
+}

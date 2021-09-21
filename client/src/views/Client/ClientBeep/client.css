@@ -1,0 +1,233 @@
+.beep-client {
+	background: #f7f7f7;
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+}
+.background-red {
+	background-color: red;
+}
+
+.background-blue {
+	background-color: blue;
+}
+.beep-client-container {
+	position: relative;
+	padding: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	max-width: 375px;
+	background: #fff;
+	margin: auto;
+	min-height: -webkit-fill-available;
+}
+
+.beep-client button {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 300px;
+  height: 50px;
+}
+
+.beep-client .text{
+	font: normal normal 600 18px/25px Montserrat;
+}
+
+.beep-client-text{
+	font: normal normal 600 28px Montserrat;
+	margin: 50px 0 68px 0;
+  padding: 0;
+}
+
+.beep-client-container img{
+	height: 92px;
+	max-width: 100%;
+	position: relative;
+}
+
+.beep-client-sub-container{
+	position: relative;
+	padding: 115px 0 20px 0;
+}
+
+.beep-details-ready{
+	position: fixed;
+	font-size: 75%;
+	bottom: 13%;
+	right: 0;
+	left: 0;
+}
+
+.beep-details {
+	position: relative;
+	display: block;
+	height: max-content;
+	overflow: auto;
+}
+
+.beep-client-container2{
+	position: relative;
+	max-width: 720px;
+	min-width: 374px;
+	margin: auto;
+}
+
+.beep-client .btn-back-container{
+	margin-top: 44px;
+	position: center;
+	z-index: 1;
+}
+
+.beep-generated {
+	display: flex;
+	height: 100%;
+	width: 374px;
+	background: #1473E6;
+	margin: auto;
+	flex-direction: column;
+	align-items: center;
+}
+.beep-accepted {
+	display: flex;
+	height: 100%;
+	width: 374px;
+	background: #155603;
+	margin: auto;
+	flex-direction: column;
+	align-items: center;
+}
+
+.beep-img-container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 101.6px;
+	min-height: 44px;
+}
+
+.content {
+display: flex; 
+	flex-direction: column;
+	background: #fff;
+	max-height: 100%;
+	min-height: 20px;
+	display: flex;
+	position: relative;
+	width: -webkit-fill-available;
+	height: 100%;
+	min-height: 487px;
+	margin: 62px 16px 111px 16px;
+	border-radius: 22px 22px 0 0;
+}
+
+
+.beep-generated .separation{
+	position: relative;
+	width: 100%;
+}
+
+.beep-generated .separation:before {
+	content: "";
+	position: absolute;
+	border-top: 2px dashed #E0E0E0;
+	top: 0px;
+	bottom: -15px;
+	left: 17px;
+	right: 17px;
+}
+
+.circle-1{
+	background: #1473E6;
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+	position: absolute;
+	left: -14px;
+	top: -12px;
+}
+
+.circle-2{
+	background: #1473E6;
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+	position: absolute;
+	right: -14px;
+	top: -12px;
+}
+
+.beep-head {
+	display: flex;
+	min-width: 100%;
+	min-height: 216px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.beep-head img{
+	position: relative;
+	max-width: 88px;
+	max-height: 88px;
+	display: flex;
+	margin-top: 31px;
+}
+
+.badge-text{
+	position: relative;
+	margin-top: 27px;
+	font: normal normal 600 20px/1 Montserrat;
+}
+
+.beep-body{
+	display: flex;
+	height: 100%;
+	flex: auto;
+	flex-direction: column;
+	align-items: center;
+}
+
+.beep-body-generate-time{
+	margin-top: 13px!important;
+}
+
+.beep-body-title{
+	position: relative;
+	font: normal normal 600 15px/1 Montserrat;
+	margin-top: 31px;
+	color:#8F92A1;
+	display: flex;
+}
+
+.beep-details-number{
+	position: relative;
+	font: normal normal 650 75px/1 Montserrat;
+	margin-top: 13px;
+	display: flex;
+	min-height: 105px;
+	align-items: center;
+}
+
+.beep-body-ready{
+	margin-top: 24px;
+
+	font: normal normal 700 18px/1 Montserrat;
+	color: green
+}
+
+.beep-bottom-effect{
+height: 17px;
+	position: absolute;
+	bottom: -9px;
+	left: 0px;
+	right: 0px;
+	background: radial-gradient(circle, #1473e6, #1473e6 48%, #0000 55%, #0000 100%) -19px 0px/23.9px 20px;
+}
+

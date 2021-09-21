@@ -1,0 +1,39 @@
+.qr-code-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qr-code-container {
+  display: inline-block;
+  margin: 100px auto;
+  padding: 80px;
+  border-radius: 10;
+  border: 2px solid aqua;
+  position: relative;
+}
+.logo-qr {
+  background: center / contain no-repeat;
+  width: 160px;
+  margin: "auto";
+  height: auto;
+  max-height: 100px;
+}
+.logo-qr-bg {
+  background: white;
+  position: absolute;
+  width: 150px;
+  padding: 20px;
+}
+.logo-qr-beep {
+  top: 0;
+  left: 50px;
+  transform: translateY(-50%);
+}
+
+.logo-qr-client {
+  bottom: 0;
+  right: 50px;
+  transform: translateY(50%);
+}

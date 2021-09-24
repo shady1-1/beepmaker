@@ -113,7 +113,7 @@ const MenuPage = () => {
                     </div>
                   </label>
                   <label className="btn button" htmlFor="uplaod">
-                    Télécharger une image
+                    Télécharger PDF
                   </label>
                 </div>
                 <form onSubmit={uploadLogic}>

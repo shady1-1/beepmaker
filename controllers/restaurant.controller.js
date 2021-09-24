@@ -42,6 +42,7 @@ const loginRestaurant = async (req, res) => {
     password: userPassword,
     isAuthorized,
     isVerified,
+
   } = restaurant[0];
 
   if (!verifyHash(password, userPassword)) {
@@ -58,7 +59,7 @@ const loginRestaurant = async (req, res) => {
 : \`${email}\` to login !`,
     });
   }
-  if (!isAuthorizeblockedd) {
+  if (!isAuthorized) {
     return apiResponse(res, 403, {
       status: "blocked",
       message: `votre email address : \`${email}\` est blocké !`,
@@ -347,7 +348,7 @@ const verifyForgotPassword = async (req, res) => {
     );
     return apiResponse(res, 200, {
       success: true,
-      message: `Oublier la vérification du mot de passe : Vérification de l'e-mail ok !`,
+      message: `Forget password verification : Vérification de l'e-mail ok !`,
       token,
     });
   } catch (e) {

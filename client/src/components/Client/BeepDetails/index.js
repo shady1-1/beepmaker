@@ -28,8 +28,10 @@ const BeepDetails = ({ beep }) => {
 					<div className="beep-body">
 						<div className="beep-body-title">Votre numéro est</div>
 						<div className="beep-details-number">N°{beep.numero}</div>
-						<div className="beep-body-generate-time beep-body-title">ce numéro a une duré de 3 heures</div>
-						{beep.ready && <div className="beep-body-ready">Votre commande est prête</div>}
+						{beep.ready && <div className="beep-body-ready">Présentez-vous au comptoire</div>}
+						<div> </div>
+						<div className="beep-body-generate-time beep-body-title">(ticket bleu= En cours/ticket vert=C'est prêt)</div>
+
 
 
 

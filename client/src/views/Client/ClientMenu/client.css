@@ -135,7 +135,16 @@ display: flex;
 }
 
 .circle-1{
-	background: #1473E6;
+	background:#008000FF ;
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+	position: absolute;
+	left: -14px;
+	top: -12px;
+}
+.circler-1{
+	background:#1473E6 ;
 	height: 22px;
 	width: 22px;
 	border-radius: 50%;
@@ -145,6 +154,15 @@ display: flex;
 }
 
 .circle-2{
+	background: #008000FF;
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+	position: absolute;
+	right: -14px;
+	top: -12px;
+}
+.circler-2{
 	background: #1473E6;
 	height: 22px;
 	width: 22px;
@@ -190,7 +208,7 @@ display: flex;
 
 .beep-body-title{
 	position: relative;
-	font: normal normal 600 15px/1 Montserrat;
+	font: normal normal 500 15px/1 Montserrat;
 	margin-top: 31px;
 	color:#8F92A1;
 	display: flex;
@@ -217,6 +235,14 @@ height: 17px;
 	bottom: -9px;
 	left: 0px;
 	right: 0px;
-	background: radial-gradient(circle, #1473e6, #1473e6 48%, #0000 55%, #0000 100%) -19px 0px/23.9px 20px;
+	background: radial-gradient(circle, #008000FF, #008000FF 48%, #0000 55%, #0000 100%) -19px 0px/23.9px 20px;
 }
 
+.beepr-bottom-effect{
+	height: 17px;
+	position: absolute;
+	bottom: -9px;
+	left: 0px;
+	right: 0px;
+	background: radial-gradient(circle, #1473E6, #1473E6 48%, #0000 55%, #0000 100%) -19px 0px/23.9px 20px;
+}

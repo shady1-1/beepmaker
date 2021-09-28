@@ -145,7 +145,7 @@ display: flex;
 }
 
 .circle-1{
-	background: #1473E6;
+	background:#FFFFFF ;
 	height: 22px;
 	width: 22px;
 	border-radius: 50%;
@@ -155,7 +155,7 @@ display: flex;
 }
 
 .circle-2{
-	background: #1473E6;
+	background:#FFFFFF ;
 	height: 22px;
 	width: 22px;
 	border-radius: 50%;
@@ -228,6 +228,6 @@ height: 17px;
 	bottom: -9px;
 	left: 0px;
 	right: 0px;
-	background: radial-gradient(circle, #1473e6, #1473e6 48%, #0000 55%, #0000 100%) -19px 0px/23.9px 20px;
+	background: radial-gradient(circle, #FFFFFF, #FFFFFF 48%, #0000 55%, #0000 100%) -19px 0px/23.9px 20px;
 }
 

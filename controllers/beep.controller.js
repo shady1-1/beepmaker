@@ -52,7 +52,7 @@ const getBeeps = async (req, res) => {
   } catch (error) {
     return res.status(400).json({
       success: false,
-      message: "there is an error",
+      message: "il ya un error",
       error: error,
     });
   }

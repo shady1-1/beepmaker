@@ -1,8 +1,8 @@
 
 import { useEffect, useRef, useState } from "react";
-import MyPDF from "../../../assets/file-1632058824526-740785338.pdf";
+
 import io from "socket.io-client";
-import { useParams } from "react-router-dom";
+
 import axios from "axios";
 
 import addNotification from "react-push-notification";
@@ -118,11 +118,11 @@ const PDFReader = () => {
     }
 //console.log(JSON. stringify(imageMenu), "i am heeeeeeeeeere" );
     return (
-        <div>
+        <div className="beep-client-container2">
 
             <section
                 id="pdf-section"
-                className="d-flex flex-column align-items-center w-100"
+                className="beep-client-container2"
             >
 
                 <Document
@@ -132,6 +132,7 @@ const PDFReader = () => {
                     <Page pageNumber={pageNumber} scale={scale} />
                 </Document>
             </section>
+
         </div>
     );
 };

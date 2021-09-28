@@ -103,7 +103,7 @@ const Client = () => {
       native: true, // when using native, your OS will handle theming.
     });
   }
-
+  setTimeout('window.location.reload();', 30000);
   return (
     <div className="beep-client">
       {!showBepp && (
@@ -146,13 +146,13 @@ const Client = () => {
         <div className="beep-client-container2">
           <div className="btn-back-container">
             <div
-              className="beep btn-back"
+              className=""
               onClick={() => {
                 setShowBepp(false);
               }}
             >
               <img alt="loading" src="../../img/arrow.png"></img>
-              <span>Retour</span>
+
             </div>
           </div>
           <BeepDetails beep={beep} />

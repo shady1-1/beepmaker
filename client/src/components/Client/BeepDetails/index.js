@@ -1,3 +1,4 @@
+import {url} from "socket.io-client/build/url";
 
 
 const BeepDetails = ({ beep }) => {
@@ -5,6 +6,7 @@ const BeepDetails = ({ beep }) => {
 		background:"green",
 
 	}
+
 	return (
 
 
